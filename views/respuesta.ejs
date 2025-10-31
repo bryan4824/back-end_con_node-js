@@ -1,0 +1,29 @@
+<%- include("templates/navbar.ejs", {titulo: "Respuesta"})%>
+<!--<%= nombre%>
+<%= email%> -->
+        <div class="shadow-sm p-3 mb-3 bg-body rounded ">
+            <!--
+                display-4 → tamaño grande y elegante para títulos.
+                text-center → centra el texto.
+                fw-bold → lo hace en negritas.
+                text-primary → usa el color principal de Bootstrap (azul por defecto).
+                my-4 → agrega espacio arriba y abajo para que no se vea pegado.
+                -->
+            <h1 class="p-3 mb-4 bg-warning text-white rounded text-center">Gracias por contactarnos.</h1>
+            <h2 class="display-6 text-center fw-bold text-dark bg-light rounded py-2">Te responderemos a la brevedad
+            </h2>
+        </div>
+
+        <div class="container">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Hemos recibido tu mensaje</h4>
+                <p>Nos pondremos en contacto contigo a la brevedad al correo: <strong><%= email %></strong></p>
+                <hr>
+                <p class="mb-0">Tu nombre es: <em><%= nombre %></em></p>
+            </div>
+        </div>
+        <br>
+ <%- include("templates/footer.ejs")%>
+    </main>
+</body>
+</html>

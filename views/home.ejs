@@ -1,0 +1,71 @@
+
+  <%- include("templates/navbar.ejs", {titulo: "Inicion"})%>
+
+  <div class="container"></div>
+  <section class="container text-center my-5 mb-4">
+    <h1 class="p-3 mb-4 bg-warning text-white rounded text-center">Bienvenido</h1>
+    <p class="lead mb-4">
+      Esta es una página de inicio genérica. Aquí se pueden mostrar mensajes, noticias o información general de la
+      aplicación.
+    </p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#" class="btn btn-light btn-lg">Ver Información</a>
+      <a href="#" class="btn btn-light btn-lg">Contacto</a>
+    </div>
+  </section>
+
+  
+    <%
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+  %>
+  <ul>
+    <% personas.forEach((persona)=>{%>
+          <li><%= persona%></li>
+    <%})%>
+  </ul>
+
+<table class="table table-hover align-middle shadow-sm rounded bg-white">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Desarrolladores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% personas.forEach((persona)=>{%>
+      <tr>
+          </li><td><%= persona%></td>
+      </tr>
+    <%})%>
+  </tbody>
+
+</table>
+  <!-- Sección de mensajes genéricos -->
+  <section class="container my-5">
+    <h2 class="mb-4 text-center">Mensajes y anuncios</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card bg-success text-white h-100 p-3">
+          <h5 class="card-title">Mensaje 1</h5>
+          <p class="card-text">Este es un mensaje informativo que se puede personalizar según se necesite.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-success text-white h-100 p-3">
+          <h5 class="card-title">Mensaje 2</h5>
+          <p class="card-text">Otro texto genérico que se puede usar para mostrar novedades o anuncios.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-success text-white h-100 p-3">
+          <h5 class="card-title">Mensaje 3</h5>
+          <p class="card-text">Aquí puedes agregar cualquier información relevante de manera temporal o general.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include("templates/footer.ejs")%>
+
+<!-- defer -->

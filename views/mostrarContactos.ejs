@@ -1,0 +1,33 @@
+  <%- include("templates/navbar.ejs", {titulo: "Mostrar Contactos"})%>
+<div class="container mt-5">
+    <table class="table rounded-top mt-3 table-success table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Correo Electronico</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contactosDB.forEach(contacto => { %>
+            <tr>
+                <td><%= contacto.nombre %></td>
+                <td><%= contacto.edad %></td>
+                <td><%= contacto.correo %></td>
+                <td>
+                    <a class="btn btn-primary" href="/editar/<%= contacto._id %>">Edita</a>  <!--/editar/:id viene de la ruta de edicion de la linea 44 del archivo rutas.js-->
+                    <a class="btn btn-danger" href="/eliminar/<%= contacto._id %>">Borrar</a>
+                </td>
+            </tr>
+        <%}) %> 
+        
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-info" href="/mostrarContactos">Volver</a>
+    
+</div>
+
+</div>
+  <%- include("templates/footer.ejs") %>

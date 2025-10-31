@@ -1,0 +1,9 @@
+<%- include("templates/navbar.ejs", {titulo: "Eliminar Contactos"})%>
+    <div class="modal-body">
+    <h5>¿Estás seguro de eliminar <%= contactoBD.nombre %>?</h5>
+    <p>Esta acción no se puede deshacer.</p>
+    <hr>
+    <a class="btn btn-secondary" href="/mostrarContactos">Cancelar</a>
+    <a class="btn btn-danger" href="/eliminarConfirmado/<%= contactoBD._id %>">Eliminar</a><!--contacto viene -->
+    </div>
+<%- include("templates/footer.ejs") %>
