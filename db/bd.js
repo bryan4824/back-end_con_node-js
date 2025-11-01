@@ -2,6 +2,7 @@
 import 'dotenv/config'// carga las variables de entorno
 import mongoose from "mongoose"
 
+import mongoose from "mongoose";
 
 async function conectaDB() {
   const uri = process.env.MONGODB_URI;
@@ -14,20 +15,16 @@ async function conectaDB() {
     await mongoose.connect(uri, {
       serverSelectionTimeoutMS: 30000,
       socketTimeoutMS: 45000,
-      tls: true,
-      tlsAllowInvalidCertificates: false,
-      tlsInsecure: false,
-      family: 4,
-      retryWrites: true,
-      w: "majority"
+      family: 4, // Forzar IPv4 (opcional)
     });
-    console.log("Conexión a MongoDB establecida correctamente");
+    console.log("✅ Conexión a MongoDB establecida");
   } catch (err) {
-    console.error("Error conectando a MongoDB:", err.message);
+    console.error("❌ Error conectando a MongoDB:", err.message);
     if (err.reason) console.error("Detalle:", err.reason);
     throw err;
   }
 }
+
 
 
 export default conectaDB;
