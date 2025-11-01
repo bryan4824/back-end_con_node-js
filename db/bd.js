@@ -2,7 +2,6 @@
 import 'dotenv/config'// carga las variables de entorno
 import mongoose from "mongoose"
 
-import mongoose from "mongoose";
 
 async function conectaDB() {
   const uri = process.env.MONGODB_URI;
