@@ -1,8 +1,10 @@
-import { Router } from "express"
+
 import { mostrarContactos, nuevoContacto, buscarPorId, editarContacto, eliminarContacto, buscarContacto}  from "../db/contactoDB.js";
 import nodemon from "nodemon"
+import express from "express";
 
-const router = Router()
+const router = express.Router();
+
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
