@@ -3,6 +3,9 @@ import { mostrarContactos, nuevoContacto, buscarPorId, editarContacto, eliminarC
 import nodemon from "nodemon"
 
 const router = Router()
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
+
 
 var personas = ["Bryan", "Jorge", "Luis"]
 
